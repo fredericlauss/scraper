@@ -1,0 +1,23 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "Dans le but d’arrondir vos fins de mois d’alternants, vous avez décidé de créer une boutique sur internet de t-shirts !",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredericlauss/scraper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fredericlauss/scraper/issues"
+  },
+  "homepage": "https://github.com/fredericlauss/scraper#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "node-fetch": "^3.3.0"
+  }
+}
