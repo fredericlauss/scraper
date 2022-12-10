@@ -26,16 +26,20 @@ function getTshirtsByPage($page) {
     } else {
         $nextPage = 0;
     }
-    
+
     // données de la page
     $debut = $page * 16 - 16;
     $dataPage = array_slice($obj, $debut, 16);
     $lengthpage = count($dataPage);
-    echo $debut;
-    echo $lengthpage;
-    $dataJson = json_encode($dataPage,JSON_UNESCAPED_UNICODE);
 
     // mettre tout dans l'array ( données page avant/apres + data)
+    $dataPerPage = array( 
+    "previousPage" => $previousPage,
+    "pageActuelle" => $page,
+    "nextPage" => $nextPage,
+    "data" => $dataPage );
+    $result = json_encode($dataPerPage,JSON_UNESCAPED_UNICODE);
+    sendJSON($result);
 }
 
 function getTshirtById($id) {
