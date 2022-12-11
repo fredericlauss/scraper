@@ -20,14 +20,14 @@ ob_start();
     $nextPage = $data->nextPage;
     $previousPage = $data->previousPage;
     if($previousPage != 0) {?>
-        <a class="" href="tshirtsparpages.php?page=<?php echo($previousPage) ?>"><</a>
+        <a class="btn btn-primary" href="tshirtsparpages.php?page=<?php echo($previousPage) ?>"><</a>
         <?php } else { ?>
-            <a class="" href="">X</a>
+            <p class="btn btn-secondary mb-0">X</p>
         <?php  };
     if($nextPage != 0) {?>
-    <a class="" href="tshirtsparpages.php?page=<?php echo($nextPage) ?>">></a>
+    <a class="btn btn-primary" href="tshirtsparpages.php?page=<?php echo($nextPage) ?>">></a>
     <?php } else { ?>
-        <a class="" href="">X</a>
+        <p class="btn btn-secondary mb-0">X</p>
     <?php  }?>
 </div>
 <?php
