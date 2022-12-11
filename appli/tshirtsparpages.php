@@ -4,13 +4,15 @@ ob_start();
 ?>
 <h1 class="display-4">Products</h1>
 <div class="d-grid grid-4" style="grid-template-columns: repeat(4, 1fr)">
+    <?php $curentId = 16 * ($_GET['page'] - 1) + 0; ?>
     <?php foreach ($data->data as $tshirt) : ?>
+        <?php $curentId += 1; ?>
         <div class="card" style="width: 18rem;">
             <img src="<?= $tshirt->img ?>" class="card-img-top" alt="...">
             <div class="card-body">
                     <span class="badge bg-success"> <?= $tshirt->priceDescription ?></span>
                 <h5 class="card-title"><?= $tshirt->title ?> - <?= $tshirt->price ?></h5>
-                <a href="/product/8d89fecd-26ff-4dac-a0a8-9fe4c4a8cfe6" class="btn btn-primary">Go to page !</a>
+                <a href="tshirtId.php?id=<?php echo($curentId) ?>" class="btn btn-primary">Go to page !</a>
             </div>
         </div>
         <?php endforeach; ?>
