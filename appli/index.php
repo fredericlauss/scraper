@@ -1,5 +1,5 @@
 <?php
-$data = json_decode(file_get_contents("http://localhost/scraper/api/tshirts/1")); 
+$data = json_decode(file_get_contents("http://vps-a6ce17b4.vps.ovh.net/scraper/api/?demande=tshirts/1")); 
 ob_start();
 ?>
 <h1 class="display-4">Products</h1>
